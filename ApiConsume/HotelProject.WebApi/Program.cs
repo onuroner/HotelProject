@@ -1,3 +1,5 @@
+using HotelProject.DataAccessLayer.Concrete;
+
 namespace HotelProject.WebApi
 {
     public class Program
@@ -12,6 +14,7 @@ namespace HotelProject.WebApi
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddDbContext<Context>();
 
             var app = builder.Build();
 
