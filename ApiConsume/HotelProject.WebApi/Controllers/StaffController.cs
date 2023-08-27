@@ -44,7 +44,7 @@ namespace HotelProject.WebApi.Controllers
             return Ok(staff);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteStaff(int id)
         {
             var staff = _staffService.TGetByID(id);
