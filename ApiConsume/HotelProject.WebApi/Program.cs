@@ -3,6 +3,7 @@ using HotelProject.BusinessLayer.Concrete;
 using HotelProject.DataAccessLayer.Abstract;
 using HotelProject.DataAccessLayer.Concrete;
 using HotelProject.DataAccessLayer.EntityFramework;
+using HotelProject.WebApi.Mapping;
 
 namespace HotelProject.WebApi
 {
@@ -34,6 +35,8 @@ namespace HotelProject.WebApi
 
             builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>();
             builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
+
+            builder.Services.AddAutoMapper(typeof(AutoMapperConfig));
 
             builder.Services.AddCors(opt =>
             {
